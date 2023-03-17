@@ -107,7 +107,9 @@ export default function Navbar() {
               onClick={() => {
                 logout();
                 setAnchorEl(null);
-                navigate("/login");
+                window.location.reload();
+                // navigate("/login");
+                // location.reload();
               }}
             >
               <ListItemIcon>

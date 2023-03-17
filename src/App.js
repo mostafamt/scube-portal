@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy } from "react";
 import {
   createTheme,
   CssBaseline,
@@ -6,30 +6,33 @@ import {
   ThemeProvider,
 } from "@mui/material";
 import { Routes, Route } from "react-router-dom";
+
 import Login from "./components/Auth/Login";
-import PageNotFound from "./components/PageNotFound/PageNotFound";
-import Home from "./components/Home/Home";
-import ForgotPassword from "./components/Auth/ForgotPassword";
-import SetNewPassword from "./components/Auth/SetNewPassword";
-import Profile from "./components/Profile/Profile";
-import HomePage from "./components/Home/HomePage";
-import Courses from "./components/Pages/Courses";
-import CoursesList from "./components/Admin/Courses";
-import EBooks from "./components/Pages/EBooks";
-import LOS from "./components/Pages/LOS";
-import IOS from "./components/Pages/IOS";
-import Lessons from "./components/Pages/Lessons";
-import STCourses from "./components/Pages/STCourses";
-import STBooks from "./components/Pages/STBooks";
-import STLessons from "./components/Pages/STLessons";
-import Tenants from "./components/Admin/Tenants";
-import Users from "./components/Admin/Users";
-import Shop from "./components/Pages/Shop";
-import Groups from "./components/Admin/Groups/Groups";
-import Layout from "../src/components/Layout/Layout";
-import Group from "./components/Admin/Groups/Group";
-import Signup from "./components/Auth/Signup";
-import VerifyEmail from "./components/Auth/VerifyEmail";
+
+// const Login = lazy(() => import("./components/Auth/Login"));
+const PageNotFound = lazy(() =>
+  import("./components/PageNotFound/PageNotFound")
+);
+const ForgotPassword = lazy(() => import("./components/Auth/ForgotPassword"));
+const SetNewPassword = lazy(() => import("./components/Auth/SetNewPassword"));
+const Profile = lazy(() => import("./components/Profile/Profile"));
+const Courses = lazy(() => import("./components/Pages/Courses"));
+const CoursesList = lazy(() => import("./components/Admin/Courses"));
+const EBooks = lazy(() => import("./components/Pages/EBooks"));
+const LOS = lazy(() => import("./components/Pages/LOS"));
+const IOS = lazy(() => "./components/Pages/IOS");
+const Lessons = lazy(() => "./components/Pages/Lessons");
+const STCourses = lazy(() => "./components/Pages/STCourses");
+const STBooks = lazy(() => "./components/Pages/STBooks");
+const STLessons = lazy(() => "./components/Pages/STLessons");
+const Tenants = lazy(() => "./components/Admin/Tenants");
+const Users = lazy(() => "./components/Admin/Users");
+const Shop = lazy(() => "./components/Pages/Shop");
+const Groups = lazy(() => "components/Admin/Groups/Groups");
+const Layout = lazy(() => "src/components/Layout/Layout");
+const Group = lazy(() => "components/Admin/Groups/Group");
+const Signup = lazy(() => "./components/Auth/Signup");
+const VerifyEmail = lazy(() => "./components/Auth/VerifyEmail");
 
 function App() {
   let theme = createTheme({
