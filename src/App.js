@@ -8,6 +8,7 @@ import {
 import { Routes, Route } from "react-router-dom";
 
 import Login from "./components/Auth/Login";
+import Signup from "./components/Auth/Signup";
 
 // const Login = lazy(() => import("./components/Auth/Login"));
 const PageNotFound = lazy(() =>
@@ -31,7 +32,7 @@ const Shop = lazy(() => "./components/Pages/Shop");
 const Groups = lazy(() => "components/Admin/Groups/Groups");
 const Layout = lazy(() => "src/components/Layout/Layout");
 const Group = lazy(() => "components/Admin/Groups/Group");
-const Signup = lazy(() => "./components/Auth/Signup");
+// const Signup = lazy(() => "./components/Auth/Signup");
 const VerifyEmail = lazy(() => "./components/Auth/VerifyEmail");
 
 function App() {
